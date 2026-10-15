@@ -25,6 +25,10 @@ public class Cfg {
 	static final Path P = FabricLoader.getInstance().getConfigDir().resolve("anchorglow.json");
 	public static Cfg c = new Cfg();
 
+	public Cfg copy() {
+		return G.fromJson(G.toJson(this), Cfg.class);
+	}
+
 	public static void ld() {
 		try {
 			if (Files.exists(P)) {

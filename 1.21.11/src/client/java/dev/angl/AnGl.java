@@ -15,7 +15,7 @@ public class AnGl implements ClientModInitializer {
 		net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents.DISCONNECT.register((h, m) -> Anc.clear());
 		KeyMapping k = KeyBindingHelper.registerKeyBinding(new KeyMapping("key.anchorglow.open", InputConstants.KEY_I, KeyMapping.Category.register(Identifier.fromNamespaceAndPath("anchorglow", "main"))));
 		ClientTickEvents.END_CLIENT_TICK.register(m -> {
-			while (k.consumeClick()) if (m.screen == null) m.setScreen(CfgScr.mk(null));
+			while (k.consumeClick()) if (m.screen == null) m.setScreen(new dev.angl.ui.Panel(null));
 		});
 	}
 }

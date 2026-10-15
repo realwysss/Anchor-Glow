@@ -4,7 +4,7 @@
 
 respawn anchors glow with a cheap shader glow that gets brighter with every charge.
 
-client side fabric mod for 1.21.11, 26.1 and 26.2. press **I** to open the settings (rebind it in Controls), or use Mod Menu. needs cloth config.
+client side fabric mod for 1.21.11, 26.1 and 26.2. press **I** to open the settings (rebind it in Controls), or use Mod Menu. the settings menu is built into the mod, it only needs fabric api. color picker with hex field, a live preview, sliders and switches.
 
 - **brighter with charge**: more glowstone charges, brighter glow
 - **empty anchors**: also gives an anchor without a charge a faint glow
@@ -24,7 +24,7 @@ client side fabric mod for 1.21.11, 26.1 and 26.2. press **I** to open the setti
 | `anchor-glow-mc26.1-1.0.0.jar` | 26.1 |
 | `anchor-glow-mc26.2-1.0.0.jar` | 26.2 |
 
-on the releases page. fabric loader 0.16 or newer, cloth config.
+on the releases page. fabric loader 0.16 or newer, fabric api.
 
 ## pictures
 
