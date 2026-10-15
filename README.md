@@ -1,0 +1,52 @@
+<p align="center"><img src="icon.png" width="128"></p>
+
+# Anchor Glow
+
+respawn anchors glow with a cheap shader glow that gets brighter with every charge.
+
+client side fabric mod for 1.21.11, 26.1 and 26.2. press **I** to open the settings (rebind it in Controls), or use Mod Menu. needs cloth config.
+
+- **brighter with charge**: more glowstone charges, brighter glow
+- **empty anchors**: also gives an anchor without a charge a faint glow
+- **color**: any color
+- **size**: how big the glow is (10% to 500%)
+- **strength**: how bright it is (0% to 500%), above 100% it gets brighter than normal
+- **softness**: wide and soft or small and tight
+- **blend**: add (brighter, can burn out) or screen (gentler)
+- **effect**: static, pulse, flicker, rainbow or shimmer, with a speed slider
+- **range** and **max glows**: how far away and how many glows get drawn, lower is faster
+
+## download
+
+| jar | minecraft |
+|---|---|
+| `anchor-glow-mc1.21.11-1.0.0.jar` | 1.21.11 |
+| `anchor-glow-mc26.1-1.0.0.jar` | 26.1 |
+| `anchor-glow-mc26.2-1.0.0.jar` | 26.2 |
+
+on the releases page. fabric loader 0.16 or newer, cloth config.
+
+## pictures
+
+| off | on |
+|---|---|
+| ![off](screenshots/off.png) | ![on](screenshots/on.png) |
+
+| strong | rainbow |
+|---|---|
+| ![strong](screenshots/strong.png) | ![rainbow](screenshots/rainbow.png) |
+
+![settings](screenshots/settings.png)
+
+## why it does not lag
+
+- the whole glow is one draw call with one small shader. there are no extra screen copies, no blur passes and no extra textures
+- nothing is drawn when there is nothing in range, and the mod does no work when it is switched off
+- glows behind you, too far away or too small on the screen are skipped, and only the closest ones up to the max glows setting are kept
+- the glow is hidden behind blocks by reading the depth of the scene, so walls block it
+
+## how it works
+
+respawn anchors are tracked per chunk when a chunk loads and when a block changes, so the game never scans the world for them each frame. a mixin at the end of the world rendering turns every glow into a camera facing soft disc, all discs are drawn together with additive (or screen) blending over the finished world, before your hand and the interface.
+
+all rights reserved. made by wysss.
