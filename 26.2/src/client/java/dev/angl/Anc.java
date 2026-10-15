@@ -14,6 +14,7 @@ import net.minecraft.world.level.chunk.LevelChunkSection;
 
 public class Anc {
 	public static final Map<Long, Integer> map = new HashMap<>();
+	public static Object lvl;
 	static final Map<Long, ArrayList<Long>> by = new HashMap<>();
 
 	static long ck(int x, int z) {
