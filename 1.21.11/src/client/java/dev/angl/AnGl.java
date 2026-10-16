@@ -17,7 +17,10 @@ public class AnGl implements ClientModInitializer {
 		net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents.DISCONNECT.register((h, m) -> Anc.clear());
 		KeyMapping k = key = KeyBindingHelper.registerKeyBinding(new KeyMapping("key.anchorglow.open", InputConstants.KEY_I, KeyMapping.Category.register(Identifier.fromNamespaceAndPath("anchorglow", "main"))));
 		ClientTickEvents.END_CLIENT_TICK.register(m -> {
-			while (k.consumeClick()) if (m.screen == null) m.setScreen(new dev.angl.ui.Panel(null));
+			while (k.consumeClick()) if (m.screen == null) {
+				if (net.fabricmc.loader.api.FabricLoader.getInstance().isModLoaded("wysslib")) m.setScreen(new dev.angl.ui.Panel(null));
+				else if (m.player != null) m.player.displayClientMessage(net.minecraft.network.chat.Component.literal("Anchor Glow needs Wysss Library to open its menu"), true);
+			}
 		});
 	}
 }

@@ -4,7 +4,7 @@
 
 respawn anchors glow with a cheap shader glow that gets brighter with every charge.
 
-client side fabric mod for 1.21.11, 26.1 and 26.2. press **I** to open the settings (press it again to close, rebind it in Controls), or use Mod Menu. the settings menu is built into the mod, it only needs fabric api. color picker with hex field, a live preview, sliders and switches.
+client side fabric mod for 1.21.11, 26.1 and 26.2. press **I** to open the settings (press it again to close, rebind it in Controls), or use Mod Menu. the settings menu needs [Wysss Library](https://github.com/realwysss/Wysss-Library) to open (fabric api and Wysss Library). color picker with hex field, a live preview, sliders and switches.
 
 - **brighter with charge**: more glowstone charges, brighter glow
 - **empty anchors**: also gives an anchor without a charge a faint glow
@@ -20,9 +20,9 @@ client side fabric mod for 1.21.11, 26.1 and 26.2. press **I** to open the setti
 
 | jar | minecraft |
 |---|---|
-| `anchor-glow-mc1.21.11-1.1.0.jar` | 1.21.11 |
-| `anchor-glow-mc26.1-1.1.0.jar` | 26.1 |
-| `anchor-glow-mc26.2-1.1.0.jar` | 26.2 |
+| `anchor-glow-mc1.21.11-1.2.0.jar` | 1.21.11 |
+| `anchor-glow-mc26.1-1.2.0.jar` | 26.1 |
+| `anchor-glow-mc26.2-1.2.0.jar` | 26.2 |
 
 on the releases page. fabric loader 0.16 or newer, fabric api.
 

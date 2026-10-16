@@ -3,8 +3,8 @@ package dev.angl;
 public class Lay {
 	public boolean on = true;
 	public int col = 0xa24bff;
-	public int rad = 55;
-	public int str = 35;
+	public int rad = 65;
+	public int str = 55;
 	public int fal = 100;
 	public int anim = 1;
 	public int spd = 100;
